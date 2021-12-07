@@ -1,0 +1,70 @@
+@use '../utils/variables' as vars;
+@use '../base/typography' as *;
+
+.landing {
+    padding: vars.$section-padding;
+    min-height: calc(100vh - 70px);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .small-breif {
+            h1 {
+                color: vars.$secondary-color;
+                margin: 0;
+
+                span {
+                    @extend .h-font-style;
+                    color: vars.$main-color;
+                }
+            }
+            p {
+                color: vars.$secondary-color;
+                margin: 0;
+                font-size: 2rem;
+
+                span {
+                    @extend .h-font-style;
+                    color: vars.$main-color;
+                }
+
+                &:last-of-type {
+                    text-align: right;
+                    font-weight: bold;
+                    margin-bottom: 80px;
+                }
+            }
+
+            & > div .btn:first-child {
+                margin-right: 26px;
+            }
+        }
+
+        .my-photo {
+            padding: 5px;
+            border: 5px solid vars.$secondary-color;
+            border-radius: 50%;
+            overflow: hidden;
+
+            .img {
+                width:300px;
+                height: 300px;
+                padding: 20px;
+                border-radius: 50%;
+                background: {
+                    image: url('./thumb-1920-689492.jpg');
+                    repeat: no-repeat;
+                    position: center;
+                    size: cover;
+                } 
+
+                &:hover {
+                    transform: scale(1.1) rotate(5deg);
+                    transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+                }
+            }
+        }
+    }
+}

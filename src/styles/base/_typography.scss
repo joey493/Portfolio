@@ -1,0 +1,100 @@
+@use '../utils/variables' as vars;
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+.h-font-style {font-family: vars.$font}
+
+
+.h1 {
+    font: {
+        size: 3.5rem;
+        weight: bold;
+    }
+    text-transform: uppercase;
+
+    span {
+        font: {
+            family: vars.$font;
+            weight: normal;
+        }
+    }
+}
+
+
+
+// .h2 {
+//     font: {
+//         family: $first-font;
+//         size: 100px;
+//         weight: normal;
+//     }
+// }
+// .h3 {
+//     font: {
+//         family: $first-font;
+//         size: 56px;
+//         weight: normal;
+//     }
+// }
+// .h4 {
+//     font: {
+//         family: $first-font;
+//         size: 32px;
+//         weight: normal;
+//     }
+// }
+// .h5 {
+//     font: {
+//         family: $sec-font;
+//         size: 28px;
+//         weight: normal;
+//     }
+//     letter-spacing: 4.75px;
+// }
+
+// .nav-text {
+//     font: {
+//         family: $sec-font;
+//         size: 16px;
+//         weight: normal;
+//     }
+//     letter-spacing: 2.7px;
+// }
+
+// .sub-h1 {
+//     font: {
+//         family: $first-font;
+//         size: 28px;
+//         weight: normal;
+//     }
+// }
+// .sub-h2 {
+//     font: {
+//         family: $sec-font;
+//         size: 14px;
+//         weight: normal;
+//     }
+//     letter-spacing: 2.35px;
+// }
+
+// .sec-header {
+//     @extend .h5;
+//     span {
+//         padding-right: 20px;
+//         opacity: 0.25;
+//     }
+// }
+
+// .body-text {
+//     font: {
+//         size: 18px;
+//         weight: normal;
+//     }
+//     line-height: 32px;
+//     color:#D0D6F9
+// }

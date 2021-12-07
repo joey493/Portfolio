@@ -1,0 +1,36 @@
+@use '../utils/variables' as vars;
+
+// .span {
+//     @extend .h-font-style;
+//     color: vars.$main-color;
+// }
+
+.sec-header {
+    font-size: 4rem;
+    line-height: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin: 0 0 70px;
+    color: vars.$secondary-color;
+}
+
+.p {
+    font: {
+        size: 1.25rem;
+        weight: normal;
+    }
+    line-height: 2rem;
+    color: #022e3e; // change
+}
+
+.icon {
+    transition:all .3s ease-in-out;
+    margin-right: 20px;
+    font-size: 2rem;
+    color: vars.$main-color;
+    opacity: .8;
+
+    &:hover {
+        opacity: 1;
+    }
+}

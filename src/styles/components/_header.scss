@@ -1,0 +1,58 @@
+@use '../utils/variables' as vars;
+header {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+
+        .logo {
+            text-transform: uppercase;
+            color: vars.$secondary-color;
+            font: {
+                size: 1.563rem;
+                weight: bold;
+            }
+
+            span {
+                color: vars.$main-color;
+            }
+        }
+
+        .navbar {
+            display: flex;
+
+            li {
+                @extend .grow-shadow;
+                margin-right: 0.94rem;
+                line-height: 46px;
+                text-transform: uppercase;
+                color: vars.$secondary-color;
+
+                span {
+                    padding-left: 5px;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}
+
+.active { // active section
+    color: vars.$main-color;
+    font-weight: bold;
+}
+
+
+// header hover effect
+.grow-shadow {
+    cursor: vars.$btn-cursor;
+    padding: 3px 15px; // i may change it
+    border-radius: 10px;
+    transition: vars.$main-transition;
+    
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        transform: scale(1.1);
+    }
+}

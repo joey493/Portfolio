@@ -1,0 +1,24 @@
+@use '../utils/variables' as vars;
+
+.btn {
+    cursor: vars.$btn-cursor;
+    padding: 20px;
+    border-radius: 5px;
+    letter-spacing: 1.5px;
+}
+
+.main-btn {
+    background-color: vars.$secondary-color;
+    color: vars.$white-color;
+    font-size: 1.125rem;
+    border: none;
+
+}
+
+.sec-btn {
+    background-color: vars.$white-color;
+    color: vars.$secondary-color;
+    font-size: 1.125rem;
+    font-weight: bold;
+    border: 2px solid  vars.$secondary-color;
+}
