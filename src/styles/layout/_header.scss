@@ -1,10 +1,12 @@
 @use '../utils/variables' as vars;
 header {
+    position: relative;
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
 
         .logo {
             text-transform: uppercase;
@@ -13,7 +15,6 @@ header {
                 size: 1.563rem;
                 weight: bold;
             }
-
             span {
                 color: vars.$main-color;
             }
@@ -21,22 +22,49 @@ header {
 
         .navbar {
             display: flex;
+            column-gap: 16px;
 
             li {
                 @extend .grow-shadow;
-                margin-right: 0.94rem;
                 line-height: 46px;
-                text-transform: uppercase;
                 color: vars.$secondary-color;
 
-                span {
+                a {
+                    text-transform: uppercase;
                     padding-left: 5px;
                     letter-spacing: 1px;
+                    color: inherit;
+                    text-decoration: none;
                 }
+            }
+
+            @media (max-width: 1000px) {
+                column-gap: 0;
+
+            }
+        }
+    }
+
+    @media (max-width: vars.$medium-devices) {
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        .container {
+            .logo{
+                font-size: 2rem;
+            }
+            
+            .navbar {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
             }
         }
     }
 }
+
+
+
 
 .active { // active section
     color: vars.$main-color;
@@ -55,4 +83,6 @@ header {
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         transform: scale(1.1);
     }
+
+    
 }

@@ -1,0 +1,33 @@
+@use '../utils/variables' as vars;
+@use './global_com';
+
+
+.navmenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: vars.$secondary-color;
+    perspective: 500px;
+    text-transform: uppercase;
+    display: none;
+
+    
+    li {
+        padding: 16px;
+        color:#fff;
+        transition: all .3s ease-in-out;
+        cursor: vars.$btn-cursor;
+        a {
+            padding-left: 15px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        &:hover {
+        background-color: vars.$main-color ;
+        transform: translateZ(10px);
+        }
+    }
+}

@@ -1,19 +1,32 @@
+import React, { useState } from 'react';
+// import { FaHome, FaUser, FaBriefcase, FaEnvelope } from 'react-icons/fa';
+import Hamburger from './hamburger.icon'
+import { data } from '../data'
 import NavItm from './navItm.component';
-import { faHome, faUser, faBriefcase, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-// import './header.style.scss';
 const Header = () => {
+    const [active, setActive] = useState(false);
+
+    const { navItms } = data
+
+    const handleClick = () => {
+        active ? setActive(false) : setActive(true)
+    }
+
     return (
         <header>
             <div className='container'>
                 <div className='logo'>Ibra<span className='h-font-style'>him</span></div>
                 <ul className='navbar'>
-                    <NavItm title='Home' icon={faHome} active='active' />
-                    <NavItm title='About' icon={faUser} /> {/*it will may contain skills */}
-                    {/* <li>Skills</li> */}
-                    <NavItm title='My Work' icon={faBriefcase} />
-                    <NavItm title='contact me' icon={faEnvelope} />
+                    {navItms.map(({ title, icon, path }) => (
+                        <li key={title}>
+                            {icon}
+                            <a href={path}>{title}</a>
+                        </li>
+                    ))}
                 </ul>
+                <Hamburger click={handleClick} isActive={active} />
+                <NavItm data={navItms} isActive={active} />
             </div>
         </header >
     )
