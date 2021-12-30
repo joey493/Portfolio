@@ -1,8 +1,6 @@
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 const NavItm = ({ data, isActive }) => {
     return (
-        <ul className='navmenu' style={{ display: isActive ? 'block' : 'none' }}>
+        <ul className={`navmenu ${isActive ? 'show' : ''}`}>
             {data.map(({ title, icon, path }) => (
                 <li key={title}>
                     {icon}

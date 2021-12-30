@@ -12,6 +12,11 @@
     text-align: center;
     margin: 0 0 70px;
     color: vars.$secondary-color;
+
+    @media (max-width: vars.$medium-devices) {
+        font-size: 3rem;
+        margin: 0 0 35px;
+    }
 }
 
 .p {
@@ -21,6 +26,10 @@
     }
     line-height: 2rem;
     color: #022e3e; // change
+
+    @media (max-width: vars.$medium-devices) {
+        font-size: 1rem;
+    }
 }
 
 .icon {

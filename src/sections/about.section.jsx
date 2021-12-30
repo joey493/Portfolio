@@ -8,7 +8,8 @@ import {
 } from "react-icons/fa";
 
 import {
-    SiRedux
+    SiRedux,
+    SiTailwindcss
 } from 'react-icons/si'
 
 import {
@@ -20,7 +21,7 @@ import {
 
 const About = () => {
     return (
-        <section className="about">
+        <section className="about" id='about'>
             <h2 className='sec-header'>About</h2>
             <div className="container">
                 <p className="info p">
@@ -41,6 +42,10 @@ const About = () => {
                     <li>
                         <FaBootstrap className='icon' />
                         <span>BOOTSTRAP</span>
+                    </li>
+                    <li>
+                        <SiTailwindcss className='icon' />
+                        <span>TAILWIND</span>
                     </li>
                     <li>
                         <FaSass className='icon' />

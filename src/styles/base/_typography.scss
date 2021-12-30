@@ -23,6 +23,10 @@ html {
             weight: normal;
         }
     }
+
+    @media (max-width:vars.$medium-devices) {
+        font-size: 2rem;
+    }
 }
 
 

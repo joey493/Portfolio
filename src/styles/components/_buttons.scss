@@ -5,6 +5,31 @@
     padding: 20px;
     border-radius: 5px;
     letter-spacing: 1.5px;
+    position: relative;
+    
+    span{
+        transition: all .5s ease-in-out;
+    }
+
+    &::before {
+        content: attr(data-txt);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        padding: inherit;
+        transition: all .5s ease-in-out;
+    }
+
+    &:hover {
+        &::before {
+            transform: translateX(0);
+        }
+
+        span {
+            opacity: 0;
+        }
+    }
 }
 
 .main-btn {

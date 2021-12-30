@@ -20,20 +20,24 @@
                     color: vars.$main-color;
                 }
             }
+
             p {
                 color: vars.$secondary-color;
                 margin: 0;
                 font-size: 2rem;
+            }
 
-                span {
-                    @extend .h-font-style;
-                    color: vars.$main-color;
-                }
+            .Typewriter {
+                color: vars.$secondary-color;
+                text-align: right;
+                margin-bottom: 80px;
+                font-size: 2rem;
 
-                &:last-of-type {
-                    text-align: right;
-                    font-weight: bold;
-                    margin-bottom: 80px;
+                .Typewriter__wrapper {
+                    span:last-child {
+                        @extend .h-font-style;
+                        color: vars.$main-color;
+                    }
                 }
             }
 
@@ -44,27 +48,65 @@
 
         .my-photo {
             padding: 5px;
-            border: 5px solid vars.$secondary-color;
-            border-radius: 50%;
-            overflow: hidden;
 
             .img {
-                width:300px;
-                height: 300px;
-                padding: 20px;
-                border-radius: 50%;
+                width:20rem;
+                height: 20rem;
                 background: {
-                    image: url('./thumb-1920-689492.jpg');
+                    image: url('../../images/vector.jpg');
                     repeat: no-repeat;
                     position: center;
                     size: cover;
                 } 
-
-                &:hover {
-                    transform: scale(1.1) rotate(5deg);
-                    transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-                }
+                
+                animation: bounce 3s infinite ease-in-out;
             }
         }
+    }
+
+    @media (max-width: vars.$medium-devices) { 
+        .container {
+            align-items: center;
+            flex-direction: column-reverse;
+
+            .small-breif {
+                > div {
+                    text-align: center;
+                }
+
+                p {
+                    font-size: 1.3rem;
+                    margin-top: 1.5em;
+                }
+
+                .Typewriter {
+                    font-size: 1.3rem;
+                    margin-bottom: 2em;
+                }
+            }
+
+            .my-photo .img {
+                width: 14em;
+                height: 14em;
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        overflow: hidden;
+        display: inline-block;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
     }
 }

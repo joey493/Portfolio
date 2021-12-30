@@ -2,8 +2,13 @@
 
 @use './sections';
 @use './components';
+@use './layout';
 
 
 body {
     margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }

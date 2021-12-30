@@ -1,4 +1,3 @@
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     FaLinkedin,
     FaGithub,
@@ -9,30 +8,36 @@ import {
 
 const Contact = () => {
     return (
-        <section className="contact">
+        <section className="contact" id='contact'>
             <div className="container">
                 <h2 className='sec-header'>Contact</h2>
                 <p className="label">Feel free to drop us a line at: </p>
-                <div>
+                <div className='info'>
                     <p>
-                        <FaEnvelope className='icon' />
-                        <span>
-                            Email: <a href="mailto:ebrahemnader321@gmail.com">ebrahemnader321@gmail.com</a>
-                        </span>
+                        <FaEnvelope id='hello' className='con-icon' />
+                        <a href="mailto:ebrahemnader321@gmail.com">ebrahemnader321@gmail.com</a>
                     </p>
                     <p>
-                        <FaPhoneAlt className='icon' />
+                        <FaPhoneAlt className='con-icon' />
                         <span>
-                            Phone: 01014085412
+                            01014085412
                         </span>
                     </p>
                 </div>
                 <div className="social">
-                    Find Us On Social Networks:
+                    <p>
+                        Find Us On Social Networks:
+                    </p>
                     <div>
-                        <FaLinkedin className='icon' />
-                        <FaGithub className='icon' />
-                        <FaTwitter className='icon' />
+                        <a href="https://www.linkedin.com/in/ibrahim-nader-3a65351b6/">
+                            <FaLinkedin className='icon' />
+                        </a>
+                        <a href="https://github.com/joey493">
+                            <FaGithub className='icon' />
+                        </a>
+                        <a href="https://twitter.com/ibrahim33996">
+                            <FaTwitter className='icon' />
+                        </a>
                     </div>
                 </div>
             </div>
@@ -41,9 +46,3 @@ const Contact = () => {
 }
 
 export default Contact;
-
-/*
-    - github
-    - twitter
-    - linked in
-*/
