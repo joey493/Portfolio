@@ -19,7 +19,7 @@ const LandingSec = () => {
                     }} />
 
                     <div>
-                        <a href='#home' className='btn main-btn' data-txt='Resume'><span>Resume</span></a>
+                        <a href='https://drive.google.com/file/d/1sW2t3TYgmVB1JGQq5csS2S54KPz9VVOJ/view' className='btn main-btn' data-txt='Resume'><span>Resume</span></a>
                         <a href='#projects' className='btn sec-btn' data-txt='Projects'><span>Projects</span></a>
                     </div>
                 </div>
